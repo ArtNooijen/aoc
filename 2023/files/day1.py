@@ -24,5 +24,6 @@ for line in input_data.split("\n"):
     sum_first_number += int(first_number_array[0] + first_number_array[-1])
     sum_last_number += int(last_number_array[0] + last_number_array[-1])
 
+
 print(sum_first_number, sum_last_number)
 
