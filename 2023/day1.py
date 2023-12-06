@@ -1,4 +1,4 @@
-input_data = open("day1p1.txt", "r").read().strip()
+input_data = open("files/day1p1.txt", "r").read().strip()
 
 sum_first_number = 0
 sum_last_number = 0
