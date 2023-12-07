@@ -16,6 +16,7 @@ def find_minimum_cubes_per_game(line):
     return min_cubes
 
 
+
 def calculate_total_power(file_path):
     total_power = 0
     with open(file_path, "r") as file:
