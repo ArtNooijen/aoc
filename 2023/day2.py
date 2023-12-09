@@ -8,7 +8,7 @@ def check_each_cube_per_line(event):
                in {"red": 12, "green": 13, "blue": 14}.items())
 
 
-def check_line_and_split(line):
+def nheck_line_and_split(line):
     groups = line.strip().split(": ")[1].split("; ")
     return all(check_each_cube_per_line(group) for group in groups)
 
@@ -17,7 +17,7 @@ def calculate_total(file_path):
     total = 0
     with open(file_path, "r") as file:
         for i, line in enumerate(file):
-            if check_line_and_split(line):
+            if nheck_line_and_split(line):
                 total += i + 1
     return total
 
@@ -25,7 +25,7 @@ def calculate_total(file_path):
 def calculate_minimum_cubes_and_power(file_path):
     with open(file_path, 'r') as file:
         games = file.read().strip().split('\n')
-    
+
     total_power = 0
 
     for game_index, game in enumerate(games, start=1):
@@ -52,6 +52,4 @@ def calculate_minimum_cubes_and_power(file_path):
 # Replace 'files/day2in.txt' with your actual file path
 total_power = calculate_minimum_cubes_and_power("files/day2in.txt")
 print("Total Power:", total_power)
-
-
 print(calculate_total("files/day2.txt"))
